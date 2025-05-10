@@ -1,64 +1,105 @@
-/* Resume Styles */
+/* Background with Tech Icons */
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    background-color: #f9f9f9;
+    background: url('https://www.example.com/tech-background.png'); /* Replace with tech-themed image */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
 }
 
+/* Headings with Animation */
 h1 {
-    color: #333;
+    color: #008000; /* Green */
     text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 255, 0, 0.5); /* Neon effect */
+    animation: glow 2s infinite alternate;
 }
 
 h2 {
-    color: #444;
-    border-bottom: 2px solid #ddd;
+    color: #006600; /* Deep green */
+    border-bottom: 2px solid #008000;
     padding-bottom: 5px;
+    background-color: rgba(0, 128, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-p, li {
-    color: #555;
-}
-
-ul {
-    padding-left: 20px;
-}
-
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.9);
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
+/* Table Headers */
 th {
-    background-color: #0073e6;
-    color: white;
+    background-color: #8BC34A;
+    color: #7a1c1c;
+    font-size: 18px;
+    font-weight: bold;
+    animation: bounce 1s infinite alternate;
 }
 
+/* Table Data */
 td {
-    background-color: #f2f2f2;
+    background-color: #f1f8e9;
+    font-size: 16px;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+/* Animated Button */
+button {
+    background-color: #008000;
+    color: rgb(206, 125, 125);
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        margin: 10px;
+button:hover {
+    background-color: #005500;
+    transform: scale(1.1);
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 3px 3px 10px rgba(0, 255, 0, 0.5);
     }
-    .container {
-        padding: 10px;
+    to {
+        text-shadow: 3px 3px 20px rgba(0, 255, 0, 1);
     }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container, h1, h2, table {
+    animation: fadeIn 1s ease-in-out;
 }
